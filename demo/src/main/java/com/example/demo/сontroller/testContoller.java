@@ -16,6 +16,7 @@ import java.nio.file.Files;
 @RestController
 public class testContoller {
     public String rrResponse;
+    long secondsToSleep = 1;
     @PostConstruct
     public void init() throws Throwable
 
@@ -29,10 +30,17 @@ public class testContoller {
     {
         return ResponseEntity.ok().header("application/json").body(rrResponse);
     }
-    //@PostMapping (value = "/tester")
+    @PostMapping (value = "/tester")
+    public ResponseEntity<String> CheckMappingPost() throws InterruptedException
 
-
-
+    {
+        try {
+            Thread.sleep(secondsToSleep * 1000);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
+        return ResponseEntity.ok().header("application/json").body(rrResponse);
+    }
 
 }
 

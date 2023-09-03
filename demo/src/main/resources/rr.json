@@ -1,9 +1,9 @@
 {
   "name": "Иван",
-  "age": 37,
+  "age": ${age},
   "mother": {
     "name": "Ольга",
-    "age": 58
+    "age": 98
   },
   "children": [
     "Маша",
