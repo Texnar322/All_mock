@@ -21,7 +21,7 @@ public class testContoller {
     public void init() throws Throwable
 
     {
-        File file = new File("C:\\Users\\Евгений\\Downloads\\demo\\demo\\src\\main\\resources\\rr.json");
+        File file = new File("C:\\Users\\Евгений\\Downloads\\demo\\demo\\src\\main\\resources\\rr.json"); // absolute path
         rrResponse = new String(Files.readAllBytes(file.toPath()));
     }
 
